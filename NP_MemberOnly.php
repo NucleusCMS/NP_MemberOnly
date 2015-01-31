@@ -26,5 +26,3 @@ function getDescription() { return 'MemberOnly'; }
 		$this->currentItem->more = preg_replace('#<mo>(.*?)</mo>#s', '', $this->currentItem->more);
 	}
 }
-?>
-
