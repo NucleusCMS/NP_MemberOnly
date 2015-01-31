@@ -21,9 +21,9 @@ function getDescription() { return 'MemberOnly'; }
 		}
 		
 		$this->currentItem = &$data["item"]; 
-		$this->currentItem->more = preg_replace("/(<\/mo>)<br \/>\r\n/","$1",$this->currentItem->more);
-		$this->currentItem->body = preg_replace('#<mo>(.*?)<\/mo>#s', '', $this->currentItem->body); 
-		$this->currentItem->more = preg_replace('#<mo>(.*?)<\/mo>#s', '', $this->currentItem->more);
+		$this->currentItem->more = preg_replace("#(</mo>)<br />\r\n#","$1",$this->currentItem->more);
+		$this->currentItem->body = preg_replace('#<mo>(.*?)</mo>#s', '', $this->currentItem->body); 
+		$this->currentItem->more = preg_replace('#<mo>(.*?)</mo>#s', '', $this->currentItem->more);
 	}
 }
 ?>
